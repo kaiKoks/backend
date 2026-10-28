@@ -20,10 +20,17 @@ export class CatalogService {
     }
     if (!fs.existsSync(this.filePath)) {
       fs.writeFileSync(this.filePath, JSON.stringify([], null, 2), 'utf-8');
+      return [];
     }
     try {
       const raw = fs.readFileSync(this.filePath, 'utf-8');
-      return JSON.parse(raw || '[]');
+      const parsed: SavedMatrixSystem[] = JSON.parse(raw || '[]');
+      // Автоматически отсеиваем поврежденные/пустые матрицы без строк
+      return parsed.filter(
+        (sys) =>
+          Array.isArray(sys.sheets) &&
+          sys.sheets.some((sh) => Array.isArray(sh.rows) && sh.rows.length > 0),
+      );
     } catch {
       return [];
     }
@@ -34,11 +41,13 @@ export class CatalogService {
   }
 
   getAllSystems(): SavedMatrixSystem[] {
-    return this.readCatalogFile();
+    const valid = this.readCatalogFile();
+    this.writeCatalogFile(valid);
+    return valid;
   }
 
   saveSystem(name: string, sheets: any[]): SavedMatrixSystem {
-    const cleanName = (name || 'Новая матрица').trim();
+    const cleanName = (name || 'Матрица').trim();
     const list = this.readCatalogFile();
     const existingIdx = list.findIndex(
       (s) => s.name.toLowerCase() === cleanName.toLowerCase(),
@@ -46,17 +55,21 @@ export class CatalogService {
 
     const sysId = existingIdx >= 0 ? list[existingIdx].id : `sys_${Date.now()}`;
 
-    // Обогащаем строки идентификатором и именем системы для глобального поиска и @тегов
-    const normalizedSheets = (sheets || []).map((sh) => ({
-      ...sh,
-      rows: (sh.rows || []).map((r: any) => ({
-        ...r,
-        __id: `${sysId}_${sh.sheetName}_${r.__rowNumber}`,
-        __systemId: sysId,
-        __systemName: cleanName,
-        __sheetName: sh.sheetName,
-      })),
-    }));
+    const normalizedSheets = (sheets || [])
+      .filter((sh) => Array.isArray(sh.rows) && sh.rows.length > 0)
+      .map((sh) => ({
+        ...sh,
+        rows: sh.rows.map((r: any, idx: number) => ({
+          ...r,
+          __id: `${sysId}_${sh.sheetName}_${r.__rowNumber || idx + 1}`,
+          __systemId: sysId,
+          __systemName: cleanName,
+          __sheetName: sh.sheetName,
+        })),
+      }));
+
+    const totalRows = normalizedSheets.reduce((acc, s) => acc + s.rows.length, 0);
+    console.log(`[Catalog] Сохранена матрица "${cleanName}" (листов: ${normalizedSheets.length}, строк: ${totalRows})`);
 
     const record: SavedMatrixSystem = {
       id: sysId,
@@ -79,6 +92,7 @@ export class CatalogService {
     const list = this.readCatalogFile();
     const filtered = list.filter((s) => s.id !== id);
     this.writeCatalogFile(filtered);
+    console.log(`[Catalog] Удалена матрица ID=${id}`);
     return { deleted: filtered.length < list.length };
   }
 }

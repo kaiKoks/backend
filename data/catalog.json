@@ -1,8 +1,8 @@
 [
   {
-    "id": "sys_1793226937340",
+    "id": "sys_1793228917688",
     "name": "KES_NEW",
-    "updatedAt": "29.10.2026, 01:35:37",
+    "updatedAt": "29.10.2026, 02:08:37",
     "sheets": [
       {
         "sheetName": "Матрица доступа",
@@ -60,7 +60,7 @@
         ],
         "rows": [
           {
-            "__id": "sys_1793226937340_Матрица доступа_1",
+            "__id": "sys_1793228917688_Матрица доступа_1",
             "__rowNumber": 1,
             "rawValues": {
               "col_0": 1,
@@ -104,12 +104,12 @@
               "direction": "outbound"
             },
             "checkStatus": "idle",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_2",
+            "__id": "sys_1793228917688_Матрица доступа_2",
             "__rowNumber": 2,
             "rawValues": {
               "col_0": 2,
@@ -154,12 +154,12 @@
               "direction": "outbound"
             },
             "checkStatus": "idle",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_3",
+            "__id": "sys_1793228917688_Матрица доступа_3",
             "__rowNumber": 3,
             "rawValues": {
               "col_0": 3,
@@ -202,12 +202,12 @@
               "direction": "outbound"
             },
             "checkStatus": "idle",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_4",
+            "__id": "sys_1793228917688_Матрица доступа_4",
             "__rowNumber": 4,
             "rawValues": {
               "col_0": 4,
@@ -251,12 +251,12 @@
               "direction": "outbound"
             },
             "checkStatus": "idle",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_5",
+            "__id": "sys_1793228917688_Матрица доступа_5",
             "__rowNumber": 5,
             "rawValues": {
               "col_0": 5,
@@ -297,12 +297,12 @@
               "direction": "inbound"
             },
             "checkStatus": "untestable",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_6",
+            "__id": "sys_1793228917688_Матрица доступа_6",
             "__rowNumber": 6,
             "rawValues": {
               "col_0": 6,
@@ -343,12 +343,12 @@
               "direction": "outbound"
             },
             "checkStatus": "idle",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_7",
+            "__id": "sys_1793228917688_Матрица доступа_7",
             "__rowNumber": 7,
             "__sectionTitle": "Для серверов",
             "rawValues": {
@@ -394,12 +394,12 @@
               "direction": "outbound"
             },
             "checkStatus": "idle",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           },
           {
-            "__id": "sys_1793226937340_Матрица доступа_8",
+            "__id": "sys_1793228917688_Матрица доступа_8",
             "__rowNumber": 8,
             "__sectionTitle": "Для серверов",
             "rawValues": {
@@ -435,7 +435,7 @@
               "direction": "inbound"
             },
             "checkStatus": "untestable",
-            "__systemId": "sys_1793226937340",
+            "__systemId": "sys_1793228917688",
             "__systemName": "KES_NEW",
             "__sheetName": "Матрица доступа"
           }
@@ -457,6 +457,348 @@
         "stats": {
           "totalRows": 8,
           "testableRows": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "sys_1793229367841",
+    "name": "alt1-json02-Сбербанк",
+    "updatedAt": "29.10.2026, 02:16:07",
+    "sheets": [
+      {
+        "sheetName": "Лист1",
+        "columns": [
+          {
+            "key": "col_0",
+            "headerTitle": "№ П/П",
+            "semanticRole": "index"
+          },
+          {
+            "key": "col_1",
+            "headerTitle": "Функциональная роль сервера/узла",
+            "semanticRole": "role"
+          },
+          {
+            "key": "col_2",
+            "headerTitle": "IP-адрес сервера/узла (Source IP)/FQDN или подсеть",
+            "semanticRole": "source"
+          },
+          {
+            "key": "col_3",
+            "headerTitle": "IP-адрес назначения (Destination IP) /FQDN или подсеть",
+            "semanticRole": "destination"
+          },
+          {
+            "key": "col_4",
+            "headerTitle": "Порт получателя",
+            "semanticRole": "port"
+          },
+          {
+            "key": "col_5",
+            "headerTitle": "Приложение",
+            "semanticRole": "other"
+          },
+          {
+            "key": "col_6",
+            "headerTitle": "Протокол",
+            "semanticRole": "protocol"
+          },
+          {
+            "key": "col_7",
+            "headerTitle": "Цель доступа",
+            "semanticRole": "other"
+          },
+          {
+            "key": "col_8",
+            "headerTitle": "Срок предоставления доступа",
+            "semanticRole": "term"
+          }
+        ],
+        "rows": [
+          {
+            "__id": "sys_1793229367841_Лист1_1",
+            "__rowNumber": 1,
+            "rawValues": {
+              "col_0": null,
+              "col_1": "Собственные веб-клиенты для взаимодействия c внешними сервисами Сбербанка",
+              "col_2": "10.194.199.161/alt1-json02.interrao.ru",
+              "col_3": "https://edupir.testsbi.sberbank.ru:9443 ",
+              "col_4": "tcp/9443",
+              "col_5": "Веб-клиент (собственная разработка) ",
+              "col_6": "tcp",
+              "col_7": "Обмен информацией о платежах с банком посредством взаимодействия через api Сбербанка",
+              "col_8": "бессрочно"
+            },
+            "meta": {
+              "sources": [
+                "10.194.199.161/alt1-json02.interrao.ru"
+              ],
+              "destinations": [
+                "https://edupir.testsbi.sberbank.ru:9443"
+              ],
+              "ports": [
+                {
+                  "raw": "tcp/9443",
+                  "list": [
+                    "9443"
+                  ],
+                  "protocol": "TCP"
+                }
+              ],
+              "isTestable": true,
+              "direction": "outbound"
+            },
+            "checkStatus": "idle",
+            "__systemId": "sys_1793229367841",
+            "__systemName": "alt1-json02-Сбербанк",
+            "__sheetName": "Лист1"
+          },
+          {
+            "__id": "sys_1793229367841_Лист1_2",
+            "__rowNumber": 2,
+            "rawValues": {
+              "col_0": null,
+              "col_1": "Собственные веб-клиенты для взаимодействия c внешними сервисами Сбербанка",
+              "col_2": "10.194.199.161/alt1-json02.interrao.ru",
+              "col_3": "https://sbi.sberbank.ru:9443 ",
+              "col_4": "tcp/9443",
+              "col_5": "Веб-клиент (собственная разработка) ",
+              "col_6": "tcp",
+              "col_7": "Обмен информацией о платежах с банком посредством взаимодействия через api Сбербанка",
+              "col_8": "бессрочно"
+            },
+            "meta": {
+              "sources": [
+                "10.194.199.161/alt1-json02.interrao.ru"
+              ],
+              "destinations": [
+                "https://sbi.sberbank.ru:9443"
+              ],
+              "ports": [
+                {
+                  "raw": "tcp/9443",
+                  "list": [
+                    "9443"
+                  ],
+                  "protocol": "TCP"
+                }
+              ],
+              "isTestable": true,
+              "direction": "outbound"
+            },
+            "checkStatus": "idle",
+            "__systemId": "sys_1793229367841",
+            "__systemName": "alt1-json02-Сбербанк",
+            "__sheetName": "Лист1"
+          },
+          {
+            "__id": "sys_1793229367841_Лист1_3",
+            "__rowNumber": 3,
+            "rawValues": {
+              "col_0": null,
+              "col_1": "Собственные веб-клиенты для взаимодействия c внешними сервисами Сбербанка",
+              "col_2": "10.194.199.161/alt1-json02.interrao.ru",
+              "col_3": "https://edupirfintech.sberbank.ru:9443 ",
+              "col_4": "tcp/9443",
+              "col_5": "Веб-клиент (собственная разработка) ",
+              "col_6": "tcp",
+              "col_7": "Обмен информацией о платежах с банком посредством взаимодействия через api Сбербанка",
+              "col_8": "бессрочно"
+            },
+            "meta": {
+              "sources": [
+                "10.194.199.161/alt1-json02.interrao.ru"
+              ],
+              "destinations": [
+                "https://edupirfintech.sberbank.ru:9443"
+              ],
+              "ports": [
+                {
+                  "raw": "tcp/9443",
+                  "list": [
+                    "9443"
+                  ],
+                  "protocol": "TCP"
+                }
+              ],
+              "isTestable": true,
+              "direction": "outbound"
+            },
+            "checkStatus": "idle",
+            "__systemId": "sys_1793229367841",
+            "__systemName": "alt1-json02-Сбербанк",
+            "__sheetName": "Лист1"
+          },
+          {
+            "__id": "sys_1793229367841_Лист1_4",
+            "__rowNumber": 4,
+            "rawValues": {
+              "col_0": null,
+              "col_1": "Собственные веб-клиенты для взаимодействия c внешними сервисами Сбербанка",
+              "col_2": "10.194.199.161/alt1-json02.interrao.ru",
+              "col_3": "https://fintech.sberbank.ru:9443 ",
+              "col_4": "tcp/9443",
+              "col_5": "Веб-клиент (собственная разработка) ",
+              "col_6": "tcp",
+              "col_7": "Обмен информацией о платежах с банком посредством взаимодействия через api Сбербанка",
+              "col_8": "бессрочно"
+            },
+            "meta": {
+              "sources": [
+                "10.194.199.161/alt1-json02.interrao.ru"
+              ],
+              "destinations": [
+                "https://fintech.sberbank.ru:9443"
+              ],
+              "ports": [
+                {
+                  "raw": "tcp/9443",
+                  "list": [
+                    "9443"
+                  ],
+                  "protocol": "TCP"
+                }
+              ],
+              "isTestable": true,
+              "direction": "outbound"
+            },
+            "checkStatus": "idle",
+            "__systemId": "sys_1793229367841",
+            "__systemName": "alt1-json02-Сбербанк",
+            "__sheetName": "Лист1"
+          }
+        ],
+        "portDictionary": {
+          "53": "DNS",
+          "88": "Kerberos",
+          "135": "RPC",
+          "389": "LDAP",
+          "445": "SMB",
+          "464": "Kerberos Auth",
+          "500": "IPsec ISAKMP",
+          "636": "LDAPS",
+          "3268": "LDAP GC",
+          "3269": "LDAP GC SSL",
+          "4500": "NAT-T"
+        },
+        "stats": {
+          "totalRows": 4,
+          "testableRows": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "sys_1793229652249",
+    "name": "alt1-tochka01",
+    "updatedAt": "29.10.2026, 02:20:52",
+    "sheets": [
+      {
+        "sheetName": "Лист1",
+        "columns": [
+          {
+            "key": "col_0",
+            "headerTitle": "№ П/П",
+            "semanticRole": "index"
+          },
+          {
+            "key": "col_1",
+            "headerTitle": "Функциональная роль сервера/узла",
+            "semanticRole": "role"
+          },
+          {
+            "key": "col_2",
+            "headerTitle": "IP-адрес сервера/узла (Source IP)/FQDN или подсеть",
+            "semanticRole": "source"
+          },
+          {
+            "key": "col_3",
+            "headerTitle": "IP-адрес назначения (Destination IP) /FQDN или подсеть",
+            "semanticRole": "destination"
+          },
+          {
+            "key": "col_4",
+            "headerTitle": "Порт получателя",
+            "semanticRole": "port"
+          },
+          {
+            "key": "col_5",
+            "headerTitle": "Приложение",
+            "semanticRole": "other"
+          },
+          {
+            "key": "col_6",
+            "headerTitle": "Протокол",
+            "semanticRole": "protocol"
+          },
+          {
+            "key": "col_7",
+            "headerTitle": "Цель доступа",
+            "semanticRole": "other"
+          },
+          {
+            "key": "col_8",
+            "headerTitle": "Срок предоставления доступа",
+            "semanticRole": "term"
+          }
+        ],
+        "rows": [
+          {
+            "__id": "sys_1793229652249_Лист1_1",
+            "__rowNumber": 1,
+            "rawValues": {
+              "col_0": 1,
+              "col_1": "Сервис распознавания актов снятия показаний",
+              "col_2": "10.194.199.14/alt1-tochka01.interrao.ru",
+              "col_3": "178.57.125.54",
+              "col_4": "tcp/16955",
+              "col_5": "Веб клиент",
+              "col_6": "tcp",
+              "col_7": "Получение и обновление версии сервиса актов снятия показаний",
+              "col_8": "Бессрочно"
+            },
+            "meta": {
+              "sources": [
+                "10.194.199.14/alt1-tochka01.interrao.ru"
+              ],
+              "destinations": [
+                "178.57.125.54"
+              ],
+              "ports": [
+                {
+                  "raw": "tcp/16955",
+                  "list": [
+                    "16955"
+                  ],
+                  "protocol": "TCP"
+                }
+              ],
+              "isTestable": true,
+              "direction": "outbound"
+            },
+            "checkStatus": "idle",
+            "__systemId": "sys_1793229652249",
+            "__systemName": "alt1-tochka01",
+            "__sheetName": "Лист1"
+          }
+        ],
+        "portDictionary": {
+          "53": "DNS",
+          "88": "Kerberos",
+          "135": "RPC",
+          "389": "LDAP",
+          "445": "SMB",
+          "464": "Kerberos Auth",
+          "500": "IPsec ISAKMP",
+          "636": "LDAPS",
+          "3268": "LDAP GC",
+          "3269": "LDAP GC SSL",
+          "4500": "NAT-T"
+        },
+        "stats": {
+          "totalRows": 1,
+          "testableRows": 1
         }
       }
     ]
